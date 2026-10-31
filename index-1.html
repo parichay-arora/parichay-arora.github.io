@@ -1,0 +1,1525 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8">
+        <title>Parichay Arora | Financial Analyst & Valuations Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="Parichay Arora, Financial Analyst, Real Estate Valuations, Equity Research, Portfolio, Wipro, FORE School of Management"/>
+        <meta name="description" content="Professional portfolio of Parichay Arora, Senior Analyst specializing in Real Estate Valuations, Investor Reporting, and Financial Modeling."/>
+
+        <!-- Font Awesome & Google Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <style>
+            /* ============================================================
+               1. Global Reset & Base
+            ============================================================ */
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: #0b0f17;
+                color: #e2e8f0;
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+                font-size: 15px;
+                line-height: 1.6;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: all 0.25s ease;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .fl-wrap {
+                width: 100%;
+                position: relative;
+            }
+
+            /* ============================================================
+               2. Dynamic Sticky Top Navigation Bar
+            ============================================================ */
+            .custom-top-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background: #111622;
+                border-bottom: 1px solid #1f293d;
+                height: 64px;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-container {
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+            }
+
+            .nav-brand {
+                font-size: 1.2rem;
+                font-weight: 800;
+                color: #f59e0b;
+                letter-spacing: 0.5px;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                gap: 2px;
+            }
+
+            .nav-link-item {
+                font-size: 0.76rem;
+                text-transform: uppercase;
+                letter-spacing: 1.1px;
+                font-weight: 700;
+                color: #94a3b8;
+                padding: 0 14px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                transition: all 0.2s ease;
+            }
+
+            .nav-link-item:hover {
+                color: #ffffff;
+            }
+
+            .nav-link-item.active {
+                background: #f59e0b;
+                color: #0b0f17 !important;
+                font-weight: 800;
+            }
+
+            .nav-resume-btn {
+                color: #f59e0b;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-left: 10px;
+                padding: 7px 13px;
+                border: 1px solid rgba(245, 158, 11, 0.4);
+                border-radius: 4px;
+            }
+
+            .nav-resume-btn:hover {
+                background: #f59e0b;
+                color: #0b0f17;
+            }
+
+            /* Music Toggle Button */
+            .nav-music-btn {
+                background: transparent;
+                color: #94a3b8;
+                border: 1px solid rgba(148, 163, 184, 0.25);
+                border-radius: 4px;
+                padding: 6px 12px;
+                font-size: 0.75rem;
+                font-weight: 700;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+                margin-left: 8px;
+            }
+
+            .nav-music-btn:hover {
+                color: #f59e0b;
+                border-color: rgba(245, 158, 11, 0.5);
+            }
+
+            .nav-music-btn.playing {
+                color: #f59e0b;
+                border-color: #f59e0b;
+                background: rgba(245, 158, 11, 0.08);
+            }
+
+            .music-bars {
+                display: inline-flex;
+                align-items: flex-end;
+                gap: 2px;
+                height: 12px;
+            }
+
+            .music-bars .bar {
+                width: 2px;
+                height: 3px;
+                background-color: currentColor;
+                border-radius: 1px;
+                transition: height 0.2s ease;
+            }
+
+            .nav-music-btn.playing .music-bars .bar:nth-child(1) {
+                animation: soundWave 0.7s infinite alternate ease-in-out;
+            }
+
+            .nav-music-btn.playing .music-bars .bar:nth-child(2) {
+                animation: soundWave 0.9s infinite alternate 0.2s ease-in-out;
+            }
+
+            .nav-music-btn.playing .music-bars .bar:nth-child(3) {
+                animation: soundWave 0.6s infinite alternate 0.4s ease-in-out;
+            }
+
+            @keyframes soundWave {
+                0% { height: 3px; }
+                100% { height: 12px; }
+            }
+
+            /* ============================================================
+               3. Centered Hero Section (Clean Overlay & Crisp Text)
+            ============================================================ */
+            .hero-centered-wrap {
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                padding-top: 64px;
+            }
+
+            .hero-bg-layer {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                filter: brightness(1.0) saturate(1.1);
+                z-index: 1;
+            }
+
+            .hero-dark-overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(11, 15, 23, 0.55);
+                z-index: 2;
+            }
+
+            .hero-center-content {
+                position: relative;
+                z-index: 3;
+                max-width: 820px;
+                padding: 40px 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .avatar-ring-wrapper {
+                width: 155px;
+                height: 155px;
+                border-radius: 50%;
+                padding: 5px;
+                background: rgba(255, 255, 255, 0.12);
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 24px rgba(245, 158, 11, 0.35);
+                margin-bottom: 24px;
+                transition: transform 0.3s ease;
+            }
+
+            .avatar-ring-wrapper:hover {
+                transform: scale(1.04);
+            }
+
+            .hero-avatar-img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .hero-main-title {
+                font-size: 3.4rem;
+                font-weight: 800;
+                color: #ffffff;
+                letter-spacing: -0.5px;
+                margin: 0 0 12px 0;
+                min-height: 4.2rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+            }
+
+            .typewriter-cursor {
+                display: inline-block;
+                color: #f59e0b;
+                margin-left: 3px;
+                font-weight: 300;
+                animation: blinkCursor 0.8s infinite;
+            }
+
+            @keyframes blinkCursor {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+
+            .hero-tagline {
+                font-size: 1.05rem;
+                color: #cbd5e1;
+                font-weight: 400;
+                line-height: 1.6;
+                max-width: 680px;
+                margin: 0 0 32px 0;
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+            }
+
+            .btn-enter-portfolio {
+                display: inline-block;
+                background: #ffffff;
+                color: #0b0f17;
+                font-size: 0.88rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 13px 34px;
+                border-radius: 50px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+                transition: all 0.25s ease;
+            }
+
+            .btn-enter-portfolio:hover {
+                background: #f59e0b;
+                color: #0b0f17;
+                transform: translateY(-2px);
+                box-shadow: 0 14px 30px rgba(245, 158, 11, 0.35);
+            }
+
+            /* ============================================================
+               4. Split-Screen Layout (Fixed Left Column + Right Content)
+            ============================================================ */
+            .portfolio-split-wrapper {
+                position: relative;
+                width: 100%;
+                display: flex;
+            }
+
+            .fixed-left-column {
+                position: sticky;
+                top: 64px;
+                width: 32%;
+                height: calc(100vh - 64px);
+                overflow: hidden;
+                flex-shrink: 0;
+                background-color: #0b0f17;
+            }
+
+            .left-bg-layer {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                transition: opacity 0.6s ease-in-out;
+                z-index: 1;
+            }
+
+            #left-bg-1 { opacity: 1; }
+            #left-bg-2 { opacity: 0; }
+
+            .left-column-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(11, 15, 23, 0.35) 0%, rgba(11, 15, 23, 0.85) 100%);
+                z-index: 2;
+            }
+
+            .left-column-title-wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            .dynamic-vertical-title {
+                font-size: 2.1rem;
+                font-weight: 900;
+                color: #ffffff;
+                letter-spacing: 3.5px;
+                text-transform: uppercase;
+                text-align: center;
+                white-space: nowrap;
+                writing-mode: horizontal-tb;
+                transform: translateY(0);
+                text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
+                background: rgba(11, 15, 23, 0.65);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 8px;
+                padding: 10px 24px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+                transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease;
+                opacity: 1;
+            }
+
+            .dynamic-vertical-title.animating-out {
+                opacity: 0;
+                transform: translateY(-14px);
+            }
+
+            .dynamic-vertical-title.animating-in {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            .scroll-right-column {
+                width: 68%;
+                background: #0b0f17;
+                padding: 0 48px 80px 48px;
+                min-height: 100vh;
+            }
+
+            .content-section {
+                padding: 85px 0 35px 0;
+                border-bottom: 1px solid #1a2232;
+            }
+
+            .content-section:last-child {
+                border-bottom: none;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 1.85rem;
+                font-weight: 800;
+                color: #ffffff;
+                letter-spacing: -0.5px;
+                margin-bottom: 10px;
+            }
+
+            .bold-separator {
+                display: block;
+                width: 48px;
+                height: 3px;
+                background: #f59e0b;
+                border-radius: 2px;
+            }
+
+            .subheading {
+                display: block;
+                color: #94a3b8;
+                font-size: 0.92rem;
+                margin-top: 8px;
+            }
+
+            /* ============================================================
+               5. Cards, Enlarged Logos & Timelines
+            ============================================================ */
+            .abt-grid {
+                display: grid;
+                grid-template-columns: 240px 1fr;
+                gap: 32px;
+                align-items: center;
+            }
+
+            .about-image-card {
+                border-radius: 8px;
+                overflow: hidden;
+                border: 1px solid #1e293b;
+            }
+
+            .about-image-card img {
+                width: 100%;
+                display: block;
+            }
+
+            .abt-content h4 {
+                font-size: 0.95rem;
+                color: #f59e0b;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+            }
+
+            .abt-content h3 {
+                font-size: 1.18rem;
+                color: #ffffff;
+                font-weight: 700;
+                line-height: 1.4;
+                margin-bottom: 16px;
+            }
+
+            .abt-content p {
+                color: #94a3b8;
+                margin-bottom: 14px;
+                line-height: 1.7;
+                font-size: 0.92rem;
+            }
+
+            .timeline-container {
+                position: relative;
+                padding-left: 24px;
+                border-left: 2px solid #1e293b;
+            }
+
+            .timeline-card {
+                position: relative;
+                margin-bottom: 28px;
+                padding: 24px 26px;
+                background: #111722;
+                border: 1px solid #1e293b;
+                border-radius: 6px;
+                transition: border-color 0.25s ease;
+            }
+
+            .timeline-card:hover {
+                border-color: #334155;
+            }
+
+            .timeline-node {
+                position: absolute;
+                left: -31px;
+                top: 32px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #f59e0b;
+                border: 3px solid #0b0f17;
+            }
+
+            .timeline-header-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 16px;
+                margin-bottom: 12px;
+            }
+
+            .company-info-group {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .company-logo-badge {
+                width: 58px;
+                height: 58px;
+                border-radius: 10px;
+                background: #172033;
+                border: 1px solid #283548;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                overflow: hidden;
+                padding: 6px;
+            }
+
+            .company-logo-badge img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+            }
+
+            .company-logo-badge i {
+                font-size: 1.65rem;
+                color: #f59e0b;
+            }
+
+            .company-name-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #ffffff;
+                margin: 0;
+            }
+
+            .timeline-right-meta {
+                text-align: right;
+                flex-shrink: 0;
+            }
+
+            .timeline-period {
+                font-size: 0.82rem;
+                font-family: 'JetBrains Mono', monospace;
+                color: #f59e0b;
+                display: block;
+                margin-bottom: 3px;
+            }
+
+            .timeline-location {
+                font-size: 0.8rem;
+                color: #94a3b8;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .timeline-location i {
+                color: #64748b;
+                font-size: 0.75rem;
+            }
+
+            .timeline-role {
+                font-size: 0.94rem;
+                font-weight: 600;
+                color: #cbd5e1;
+                margin-bottom: 12px;
+            }
+
+            .timeline-card ul {
+                list-style: disc;
+                margin-left: 18px;
+                color: #94a3b8;
+                font-size: 0.9rem;
+            }
+
+            .timeline-card ul li {
+                margin-bottom: 6px;
+                line-height: 1.6;
+            }
+
+            .timeline-card strong {
+                color: #e2e8f0;
+            }
+
+            /* ============================================================
+               6. 4 Rows x 2 Columns Skills Layout (8 per Page)
+            ============================================================ */
+            .slider-wrapper {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .slider-track-container {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .slider-track {
+                display: flex;
+                transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+                will-change: transform;
+                width: 100%;
+            }
+
+            .skills-slide-page {
+                flex: 0 0 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px 18px;
+                box-sizing: border-box;
+            }
+
+            .skill-slide-card {
+                background: #111722;
+                border: 1px solid #1e293b;
+                border-radius: 8px;
+                padding: 14px 18px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+                box-sizing: border-box;
+            }
+
+            .skill-card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.92rem;
+                font-weight: 600;
+                color: #e2e8f0;
+            }
+
+            .skill-pct {
+                font-family: 'JetBrains Mono', monospace;
+                color: #f59e0b;
+                font-weight: 700;
+            }
+
+            .skill-track {
+                width: 100%;
+                height: 6px;
+                background: #1a2232;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+
+            .skill-fill {
+                height: 100%;
+                background: #f59e0b;
+                border-radius: 3px;
+            }
+
+            .slider-nav-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 18px;
+            }
+
+            .slider-arrows {
+                display: flex;
+                gap: 10px;
+            }
+
+            .slider-arrow-btn {
+                width: 38px;
+                height: 38px;
+                border-radius: 6px;
+                background: #111722;
+                border: 1px solid #1e293b;
+                color: #cbd5e1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .slider-arrow-btn:hover {
+                background: #f59e0b;
+                color: #0b0f17;
+                border-color: #f59e0b;
+            }
+
+            .slider-dots {
+                display: flex;
+                gap: 6px;
+            }
+
+            .slider-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background: #1e293b;
+                cursor: pointer;
+                transition: all 0.25s ease;
+            }
+
+            .slider-dot.active {
+                width: 22px;
+                background: #f59e0b;
+            }
+
+            /* ============================================================
+               7. SociableKIT Recommendations Container
+            ============================================================ */
+            .sociablekit-container {
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #111722;
+                border: 1px solid #1e293b;
+                padding: 16px;
+            }
+
+            /* ============================================================
+               8. Footer & Responsive Adaptations
+            ============================================================ */
+            .main-footer {
+                padding: 40px 0;
+                background: #080b11;
+                border-top: 1px solid #1a2232;
+                text-align: center;
+            }
+
+            .footer-social ul {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                margin-bottom: 14px;
+            }
+
+            .footer-social a {
+                color: #64748b;
+                font-size: 1.1rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #111722;
+                border: 1px solid #1e293b;
+            }
+
+            .footer-social a:hover {
+                color: #f59e0b;
+                border-color: #f59e0b;
+            }
+
+            .copyright {
+                font-size: 0.8rem;
+                color: #64748b;
+            }
+
+            @media (max-width: 600px) {
+                .skills-slide-page {
+                    grid-template-columns: 1fr;
+                }
+                .timeline-header-row {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+                .timeline-right-meta {
+                    text-align: left;
+                }
+            }
+
+            @media (max-width: 980px) {
+                .portfolio-split-wrapper {
+                    flex-direction: column;
+                }
+                .fixed-left-column {
+                    display: none;
+                }
+                .scroll-right-column {
+                    width: 100%;
+                    padding: 0 24px 60px 24px;
+                }
+                .abt-grid {
+                    grid-template-columns: 1fr;
+                }
+                .custom-top-nav .nav-links {
+                    display: none;
+                }
+                .hero-main-title {
+                    font-size: 2.4rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Dynamic Sticky Top Navigation Bar -->
+        <header class="custom-top-nav">
+            <div class="nav-container">
+                <a href="#hero-top" class="nav-brand">Parichay Arora</a>
+                <nav class="nav-links">
+                    <a href="#sec2" class="nav-link-item" data-section-id="sec2">About</a>
+                    <a href="#sec5" class="nav-link-item" data-section-id="sec5">Work Experience</a>
+                    <a href="#sec4" class="nav-link-item" data-section-id="sec4">Education</a>
+                    <a href="#sec6" class="nav-link-item" data-section-id="sec6">Skills</a>
+                    <a href="#sec8" class="nav-link-item" data-section-id="sec8">Recommendations</a>
+                    <a href="images/CV_Parichay Arora.pdf" target="_blank" class="nav-resume-btn"><i class="fa fa-file-pdf-o"></i> Resume</a>
+
+                    <!-- Background Music Controls -->
+                    <button type="button" id="music-toggle-btn" class="nav-music-btn" title="Play/Pause Background Music">
+                        <i class="fa fa-volume-off" id="music-icon"></i>
+                        <span id="music-label">Music</span>
+                        <span class="music-bars" id="music-bars">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hidden Audio Element -->
+        <audio id="bg-audio" loop preload="auto">
+            <source src="melody.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+        <div id="main">
+            <!-- Full-Screen Centered Hero Section -->
+            <div id="hero-top" class="hero-centered-wrap">
+                <div class="hero-bg-layer" style="background-image: url('https://www.jpmorganchase.com/content/dam/jpmorganchase/images/newsroom/stories/grand-opening-park-270/270park-hero-1440x810.jpg');"></div>
+                <div class="hero-dark-overlay"></div>
+
+                <div class="hero-center-content">
+                    <div class="avatar-ring-wrapper">
+                        <img src="images/1.jpg" alt="Parichay Arora" class="hero-avatar-img">
+                    </div>
+
+                    <!-- Continuous Looping Typewriter Heading -->
+                    <h1 class="hero-main-title"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
+
+                    <p class="hero-tagline">
+                        Senior Analyst at Wipro &bull; Real Estate Debt Valuations &amp; Investor Reporting &bull; MBA
+                    </p>
+
+                    <div>
+                        <a href="#sec2" class="btn-enter-portfolio">
+                            Enter Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Split-Screen Section (Fixed Left Column + Right Scroll Content) -->
+            <div class="portfolio-split-wrapper">
+                <!-- Left Sticky Column with Dual Crossfade Backgrounds & Dynamic Badge -->
+                <div class="fixed-left-column">
+                    <div id="left-bg-1" class="left-bg-layer" style="background-image: url('images/5.jpg');"></div>
+                    <div id="left-bg-2" class="left-bg-layer"></div>
+                    <div class="left-column-overlay"></div>
+                    <div class="left-column-title-wrap">
+                        <div id="left-column-title" class="dynamic-vertical-title">About</div>
+                    </div>
+                </div>
+
+                <!-- Right Scroll Column -->
+                <div class="scroll-right-column">
+                    <!-- About Section (#sec2) -->
+                    <section id="sec2" class="content-section" data-section-title="About" data-section-bg="images/5.jpg">
+                        <div class="section-title">
+                            <h2>About Me</h2>
+                            <span class="bold-separator"></span>
+                        </div>
+                        <div class="abt-grid">
+                            <div class="about-image-card">
+                                <img src="images/1.jpg" alt="Parichay Arora">
+                            </div>
+                            <div class="abt-content">
+                                <h4>Parichay Arora</h4>
+                                <h3>Senior Analyst, Wipro Ltd. (Real Estate Valuations & Investor Reporting) | MBA | Ex-Accenture</h3>
+                                <p>Experienced financial analyst specializing in real estate valuations, debt strategy models, cash flow underwriting, and quarterly investor reporting. Proven track record in streamlining analytical workflows and reconciling financial performance across institutional debt portfolios.</p>
+                                <p>Expertise in leveraging quantitative models, discounted cash flow (DCF) frameworks, and automated reporting systems to deliver accurate fund-level metrics and actionable insights for stakeholders.</p>
+                                <p>Committed to rigorous fundamental analysis and disciplined capital allocation across global fixed-income and equity markets.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Work Experience Section (#sec5) -->
+                    <section id="sec5" class="content-section" data-section-title="Experience" data-section-bg="images/work.jpg">
+                        <div class="section-title">
+                            <h2>Work Experience</h2>
+                            <span class="bold-separator"></span>
+                        </div>
+                        <div class="timeline-container">
+                            <!-- Wipro -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/wipro.png" alt="Wipro Logo" onerror="this.outerHTML='<i class=\'fa fa-building-o\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">WIPRO Ltd.</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">June 2024 - Present</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> Gurugram, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">Senior Analyst &bull; Real Estate Debt Strategies Valuations &amp; Reporting</div>
+                                <ul>
+                                    <li><strong>Quarterly Valuations &amp; Model Updates:</strong> Preparing valuation books, rolling forward, and updating quarterly valuation models incorporating forecasted cash flows and inputs from investment analysts.</li>
+                                    <li><strong>Investor Reporting:</strong> Developing and reviewing customized investor reporting templates for Real Estate Debt Strategies, ensuring accurate distribution of financial metrics.</li>
+                                    <li><strong>Financial Assumptions &amp; Bond Valuation:</strong> Analyzing and forecasting deal and fund-level IRRs, credit underwriting, and conducting bond valuations for client investment portfolios.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Jindal Stainless -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/jindal.png" alt="Jindal Stainless Logo" onerror="this.outerHTML='<i class=\'fa fa-industry\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">Jindal Stainless Ltd.</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">May 2023 - June 2023</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> Gurugram, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">Summer Internship &bull; Trade Finance Intern</div>
+                                <ul>
+                                    <li>Evaluated financing structures for cross-border trade operations, assessing counterparty risks and compliance requirements for cost-effective liquidity.</li>
+                                    <li>Assessed working capital cycles across inventory management and accounts payable to enhance liquidity reserves.</li>
+                                    <li>Engineered credit monitoring frameworks and scorecards to assess counterparty risk profiles and credit limits.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Accenture -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/accenture.png" alt="Accenture Solutions Pvt. Ltd. Logo" onerror="this.outerHTML='<i class=\'fa fa-cubes\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">Accenture Solutions Pvt. Ltd.</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">December 2020 - July 2022</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> Gurugram, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">Procurement Operations Associate</div>
+                                <ul>
+                                    <li>Monitored procurement transaction flows, automated recurring workflows, and enhanced operational efficiency across accounts payable cycles.</li>
+                                    <li>Performed quality checks, audit verifications, and compliance reconciliations on institutional trade transactions.</li>
+                                    <li>Documented updated Standard Operating Procedures (SOPs) and trained new analysts on ERP workflow systems.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Trigent -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/trigent.png" alt="Trigent Software Pvt. Ltd. Logo" onerror="this.outerHTML='<i class=\'fa fa-desktop\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">Trigent Software Pvt. Ltd.</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">August 2019 - November 2020</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> Gurugram, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">Accounts Executive</div>
+                                <ul>
+                                    <li>Deployed on-site with Accenture Solutions, executing enterprise invoice reconciliation and resolving operational discrepancies.</li>
+                                    <li>Managed internal performance scorecards, tracked monthly departmental KPIs, and generated variance reports.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education Section (#sec4) -->
+                    <section id="sec4" class="content-section" data-section-title="Education" data-section-bg="images/education.jpg">
+                        <div class="section-title">
+                            <h2>Education</h2>
+                            <span class="bold-separator"></span>
+                        </div>
+                        <div class="timeline-container">
+                            <!-- FORE -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/fore.png" alt="FORE School of Management Logo" onerror="this.outerHTML='<i class=\'fa fa-graduation-cap\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">FORE School of Management</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">March 2024</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> New Delhi, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">MBA - Investment Banking &amp; Big Data Analytics</div>
+                                <p style="color: #94a3b8; margin-bottom: 8px;">Specialization in financial valuation models, empirical risk modeling, quantitative analytics, and corporate finance.</p>
+                                <ul>
+                                    <li>Class Representative</li>
+                                    <li>Secured 1st Position in AdVishkaar, FORE School of Management</li>
+                                    <li>Secured 2nd Position in Guesstimate, Xavier Institute of Management Bhubaneswar</li>
+                                </ul>
+                            </div>
+
+                            <!-- NTU Singapore -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/ntu.png" alt="NTU Singapore Logo" onerror="this.outerHTML='<i class=\'fa fa-university\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">Nanyang Technological University</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">April 2023</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> Singapore</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">International Immersion Program</div>
+                                <p style="color: #94a3b8;">Global immersion coursework covering Blue Ocean Strategy, international trade governance, and multinational risk management.</p>
+                            </div>
+
+                            <!-- Delhi University -->
+                            <div class="timeline-card">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-header-row">
+                                    <div class="company-info-group">
+                                        <div class="company-logo-badge">
+                                            <img src="images/du.png" alt="University of Delhi Logo" onerror="this.outerHTML='<i class=\'fa fa-book\'></i>'">
+                                        </div>
+                                        <h3 class="company-name-title">University of Delhi</h3>
+                                    </div>
+                                    <div class="timeline-right-meta">
+                                        <span class="timeline-period">June 2019</span>
+                                        <span class="timeline-location"><i class="fa fa-map-marker"></i> New Delhi, India</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-role">Motilal Nehru College &bull; Bachelor of Commerce (Honours)</div>
+                                <p style="color: #94a3b8;">Rigorous coursework in corporate accounting, financial systems, auditing, microeconomics, and mercantile law.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Skills Section (#sec6) - 4 Rows x 2 Columns (8 Skills Per Page) -->
+                    <section id="sec6" class="content-section" data-section-title="Skills" data-section-bg="images/skills.jpg">
+                        <div class="section-title">
+                            <h2>Skills &amp; Methodologies</h2>
+                            <span class="bold-separator"></span>
+                            <span class="subheading">Technical proficiencies, frameworks, and analytical toolsets</span>
+                        </div>
+
+                        <div class="slider-wrapper" id="skills-slider-wrapper">
+                            <div class="slider-track-container">
+                                <div class="slider-track" id="skills-slider-track">
+                                    
+                                    <!-- Slide Page 1 (8 Skills: 2 Columns x 4 Rows) -->
+                                    <div class="skills-slide-page">
+                                        <!-- Row 1 -->
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>DCF &amp; Comps Valuation</span>
+                                                <span class="skill-pct">95%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div>
+                                        </div>
+
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Financial Modeling</span>
+                                                <span class="skill-pct">95%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div>
+                                        </div>
+
+                                        <!-- Row 2 -->
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Investor Reporting</span>
+                                                <span class="skill-pct">92%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 92%;"></div></div>
+                                        </div>
+
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Trade Finance</span>
+                                                <span class="skill-pct">85%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div>
+                                        </div>
+
+                                        <!-- Row 3 -->
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Credit Risk Assessment</span>
+                                                <span class="skill-pct">85%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div>
+                                        </div>
+
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Python (Pandas / NumPy)</span>
+                                                <span class="skill-pct">80%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 80%;"></div></div>
+                                        </div>
+
+                                        <!-- Row 4 -->
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Power BI &amp; DAX</span>
+                                                <span class="skill-pct">90%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 90%;"></div></div>
+                                        </div>
+
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Tableau Visualizations</span>
+                                                <span class="skill-pct">88%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 88%;"></div></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Page 2 (Additional / Overflow Skills) -->
+                                    <div class="skills-slide-page">
+                                        <div class="skill-slide-card">
+                                            <div class="skill-card-top">
+                                                <span>Lean Six Sigma</span>
+                                                <span class="skill-pct">85%</span>
+                                            </div>
+                                            <div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="slider-nav-bar">
+                                <div class="slider-dots" id="skills-slider-dots"></div>
+                                <div class="slider-arrows">
+                                    <button type="button" class="slider-arrow-btn" id="skills-prev-btn" aria-label="Previous Skills"><i class="fa fa-chevron-left"></i></button>
+                                    <button type="button" class="slider-arrow-btn" id="skills-next-btn" aria-label="Next Skills"><i class="fa fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recommendations Section (#sec8) - SociableKIT Integration -->
+                    <section id="sec8" class="content-section" data-section-title="Recommendations" data-section-bg="images/21.jpg">
+                        <div class="section-title">
+                            <h2>Recommendations</h2>
+                            <span class="bold-separator"></span>
+                            <span class="subheading">Endorsements from senior leaders, managers, and mentors</span>
+                        </div>
+
+                        <!-- SociableKIT Widget Live -->
+                        <div class="sociablekit-container">
+                            <div class="sk-ww-linkedin-recommendations" data-embed-id="25711445"></div>
+                            <script src="https://widgets.sociablekit.com/linkedin-recommendations/widget.js" defer></script>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/parichayarora/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:arora1328@gmail.com" title="Email"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="images/CV_Parichay Arora.pdf" target="_blank" title="Resume"><i class="fa fa-file-pdf-o"></i></a></li>
+                        <li><a href="https://www.facebook.com/iparichayarora/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/parichay_arora/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">&#169; Parichay Arora. All rights reserved.</div>
+            </footer>
+        </div>
+
+        <!-- ============================================================
+           Pure Vanilla JS (Music, Looping Typewriter, Scrollspy & Slider)
+        ============================================================ -->
+        <script>
+            // Carousel Engine for Page-based Skills Slider
+            function initPageCarousel(config) {
+                var track = document.getElementById(config.trackId);
+                var prevBtn = document.getElementById(config.prevBtnId);
+                var nextBtn = document.getElementById(config.nextBtnId);
+                var dotsContainer = document.getElementById(config.dotsId);
+
+                if (!track) return;
+
+                var pages = track.children;
+                var currentIndex = 0;
+
+                function getMaxIndex() {
+                    return Math.max(0, pages.length - 1);
+                }
+
+                function renderDots() {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = '';
+                    var maxIdx = getMaxIndex();
+                    for (var i = 0; i <= maxIdx; i++) {
+                        var dot = document.createElement('div');
+                        dot.className = 'slider-dot' + (i === currentIndex ? ' active' : '');
+                        dot.setAttribute('data-index', i);
+                        dot.addEventListener('click', function () {
+                            currentIndex = parseInt(this.getAttribute('data-index'));
+                            updateSlide();
+                        });
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+
+                function updateSlide() {
+                    var maxIdx = getMaxIndex();
+                    if (currentIndex > maxIdx) currentIndex = maxIdx;
+                    if (currentIndex < 0) currentIndex = 0;
+
+                    track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+
+                    if (dotsContainer) {
+                        var dots = dotsContainer.querySelectorAll('.slider-dot');
+                        dots.forEach(function (d, idx) {
+                            if (idx === currentIndex) d.classList.add('active');
+                            else d.classList.remove('active');
+                        });
+                    }
+                }
+
+                function nextSlide() {
+                    var maxIdx = getMaxIndex();
+                    if (currentIndex < maxIdx) {
+                        currentIndex++;
+                    } else if (config.infiniteLoop) {
+                        currentIndex = 0;
+                    }
+                    updateSlide();
+                }
+
+                function prevSlide() {
+                    var maxIdx = getMaxIndex();
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    } else if (config.infiniteLoop) {
+                        currentIndex = maxIdx;
+                    }
+                    updateSlide();
+                }
+
+                if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+                if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+                window.addEventListener('resize', function () {
+                    renderDots();
+                    updateSlide();
+                });
+
+                renderDots();
+                updateSlide();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Background Music Controller with First-Interaction Autoplay
+                var musicBtn = document.getElementById('music-toggle-btn');
+                var audio = document.getElementById('bg-audio');
+                var musicIcon = document.getElementById('music-icon');
+                var musicLabel = document.getElementById('music-label');
+
+                if (musicBtn && audio) {
+                    audio.volume = 0.3;
+
+                    function setPlayingUI() {
+                        musicBtn.classList.add('playing');
+                        musicIcon.className = 'fa fa-volume-up';
+                        musicLabel.textContent = 'Mute';
+                    }
+
+                    function setPausedUI() {
+                        musicBtn.classList.remove('playing');
+                        musicIcon.className = 'fa fa-volume-off';
+                        musicLabel.textContent = 'Music';
+                    }
+
+                    audio.addEventListener('play', setPlayingUI);
+                    audio.addEventListener('pause', setPausedUI);
+
+                    function removeGlobalListeners() {
+                        document.removeEventListener('pointerdown', handleFirstInteraction, true);
+                        document.removeEventListener('click', handleFirstInteraction, true);
+                        document.removeEventListener('touchstart', handleFirstInteraction, true);
+                    }
+
+                    function startPlayback() {
+                        if (audio.readyState === 0) {
+                            audio.load();
+                        }
+                        var playPromise = audio.play();
+                        if (playPromise !== undefined) {
+                            playPromise.then(function () {
+                                removeGlobalListeners();
+                            }).catch(function (error) {
+                                console.warn("Playback interaction or policy delay:", error);
+                            });
+                        }
+                    }
+
+                    // Explicit Music Toggle Button Click
+                    musicBtn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        if (audio.paused) {
+                            startPlayback();
+                        } else {
+                            audio.pause();
+                        }
+                    });
+
+                    // First click/tap anywhere on the viewport unlocks & plays audio
+                    function handleFirstInteraction(e) {
+                        if (musicBtn.contains(e.target)) return;
+
+                        if (audio.paused) {
+                            startPlayback();
+                        }
+                    }
+
+                    document.addEventListener('pointerdown', handleFirstInteraction, { capture: true, passive: true });
+                    document.addEventListener('click', handleFirstInteraction, { capture: true, passive: true });
+                    document.addEventListener('touchstart', handleFirstInteraction, { capture: true, passive: true });
+                }
+
+                // Initialize Continuous Looping Typewriter Effect
+                var textToType = "Parichay Arora";
+                var targetElement = document.getElementById("typewriter-text");
+                var charIndex = 0;
+                var isDeleting = false;
+                var typingSpeed = 120;
+                var deletingSpeed = 65;
+                var pauseEnd = 2000;
+                var pauseStart = 400;
+
+                function loopTypewriter() {
+                    if (!targetElement) return;
+
+                    if (!isDeleting) {
+                        targetElement.textContent = textToType.substring(0, charIndex + 1);
+                        charIndex++;
+
+                        if (charIndex === textToType.length) {
+                            isDeleting = true;
+                            setTimeout(loopTypewriter, pauseEnd);
+                            return;
+                        }
+                        setTimeout(loopTypewriter, typingSpeed);
+                    } else {
+                        targetElement.textContent = textToType.substring(0, charIndex - 1);
+                        charIndex--;
+
+                        if (charIndex === 0) {
+                            isDeleting = false;
+                            setTimeout(loopTypewriter, pauseStart);
+                            return;
+                        }
+                        setTimeout(loopTypewriter, deletingSpeed);
+                    }
+                }
+
+                setTimeout(loopTypewriter, 500);
+
+                // Initialize 4x2 Grid Page-based Skills Slider
+                initPageCarousel({
+                    trackId: 'skills-slider-track',
+                    prevBtnId: 'skills-prev-btn',
+                    nextBtnId: 'skills-next-btn',
+                    dotsId: 'skills-slider-dots',
+                    infiniteLoop: true
+                });
+
+                // Dynamic Midpoint Scrollspy & Dual-Layer Photo Crossfade
+                var navLinks = document.querySelectorAll('.nav-link-item');
+                var sections = document.querySelectorAll('.content-section');
+                var verticalTitle = document.getElementById('left-column-title');
+                var hero = document.getElementById('hero-top');
+                
+                var bg1 = document.getElementById('left-bg-1');
+                var bg2 = document.getElementById('left-bg-2');
+                var activeBgLayer = 1;
+                var currentBgUrl = '';
+                var currentSectionId = '';
+
+                function updateActiveSection() {
+                    var triggerLine = window.innerHeight * 0.50;
+                    var activeSection = null;
+
+                    sections.forEach(function (section) {
+                        var rect = section.getBoundingClientRect();
+                        if (rect.top <= triggerLine && rect.bottom > triggerLine) {
+                            activeSection = section;
+                        }
+                    });
+
+                    if (hero) {
+                        var heroRect = hero.getBoundingClientRect();
+                        if (heroRect.bottom > triggerLine) {
+                            activeSection = null;
+                        }
+                    }
+
+                    if (activeSection) {
+                        var sectionId = activeSection.getAttribute('id');
+                        var titleText = activeSection.getAttribute('data-section-title');
+                        var sectionBg = activeSection.getAttribute('data-section-bg');
+
+                        if (currentSectionId !== sectionId) {
+                            currentSectionId = sectionId;
+
+                            // Update Top Nav Tab Highlight
+                            navLinks.forEach(function (link) {
+                                if (link.getAttribute('data-section-id') === sectionId) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+
+                            // Dual-layer crossfade for Left Column Background
+                            if (sectionBg && sectionBg !== currentBgUrl) {
+                                currentBgUrl = sectionBg;
+                                if (activeBgLayer === 1) {
+                                    bg2.style.backgroundImage = "url('" + sectionBg + "')";
+                                    bg2.style.opacity = '1';
+                                    bg1.style.opacity = '0';
+                                    activeBgLayer = 2;
+                                } else {
+                                    bg1.style.backgroundImage = "url('" + sectionBg + "')";
+                                    bg1.style.opacity = '1';
+                                    bg2.style.opacity = '0';
+                                    activeBgLayer = 1;
+                                }
+                            }
+
+                            // Dynamic Title Badge Smooth Slide Animation
+                            if (verticalTitle && titleText && verticalTitle.textContent !== titleText) {
+                                verticalTitle.classList.add('animating-out');
+
+                                setTimeout(function () {
+                                    verticalTitle.textContent = titleText;
+                                    verticalTitle.classList.remove('animating-out');
+                                    verticalTitle.classList.add('animating-in');
+
+                                    setTimeout(function () {
+                                        verticalTitle.classList.remove('animating-in');
+                                    }, 20);
+                                }, 180);
+                            }
+                        }
+                    } else {
+                        currentSectionId = '';
+                        navLinks.forEach(function (link) {
+                            link.classList.remove('active');
+                        });
+                    }
+                }
+
+                window.addEventListener('scroll', updateActiveSection, { passive: true });
+                window.addEventListener('resize', updateActiveSection);
+                updateActiveSection();
+            });
+        </script>
+    </body>
+</html>
